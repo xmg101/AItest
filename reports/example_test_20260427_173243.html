@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>example_test — Test Report</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+  header { background: #1a1a2e; color: #eee; padding: 20px 32px; }
+  header h1 { margin: 0 0 4px; font-size: 1.5rem; }
+  header .meta { font-size: .85rem; opacity: .7; }
+  .summary { display: flex; gap: 16px; padding: 16px 32px; background: #fff; border-bottom: 1px solid #ddd; flex-wrap: wrap; }
+  .badge { padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: .9rem; }
+  .pass  { background: #d4edda; color: #155724; }
+  .fail  { background: #f8d7da; color: #721c24; }
+  .skip  { background: #fff3cd; color: #856404; }
+  .total { background: #e2e3e5; color: #383d41; }
+  .tests { padding: 24px 32px; max-width: 1200px; margin: 0 auto; }
+  .test-card { background: #fff; border-radius: 8px; margin-bottom: 16px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+  .test-header { display: flex; align-items: center; gap: 12px; padding: 14px 20px; cursor: pointer; }
+  .test-header:hover { background: #fafafa; }
+  .test-header .status { width: 10px; height: 10px; border-radius: 50%; }
+  .test-header .status.pass { background: #28a745; }
+  .test-header .status.fail { background: #dc3545; }
+  .test-header .status.skip { background: #ffc107; }
+  .test-header .name { font-weight: 600; flex: 1; }
+  .test-header .duration { font-size: .82rem; color: #888; }
+  .steps { border-top: 1px solid #eee; display: none; }
+  .steps.open { display: block; }
+  .step { display: flex; align-items: flex-start; gap: 16px; padding: 12px 20px; border-bottom: 1px solid #f0f0f0; }
+  .step:last-child { border-bottom: none; }
+  .step .step-status { font-size: .75rem; font-weight: 700; min-width: 36px; padding-top: 2px; text-transform: uppercase; }
+  .step .step-status.pass { color: #28a745; }
+  .step .step-status.fail { color: #dc3545; }
+  .step .step-status.skip { color: #ffc107; }
+  .step .step-info { flex: 1; }
+  .step .step-name { font-size: .9rem; }
+  .step .step-error { margin-top: 4px; font-size: .82rem; color: #dc3545; font-family: monospace; white-space: pre-wrap; }
+  .step img { max-width: 200px; max-height: 140px; border-radius: 4px; cursor: pointer; border: 1px solid #ddd; }
+  .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.85); z-index: 9999; align-items: center; justify-content: center; }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>example_test</h1>
+  <div class="meta">Generated 2026-04-27 17:32:43 &nbsp;|&nbsp; Duration 0.0s</div>
+</header>
+<div class="summary">
+  <span class="badge total">Total: 1</span>
+  <span class="badge pass">Passed: 1</span>
+  <span class="badge fail">Failed: 0</span>
+  <span class="badge skip">Skipped: 0</span>
+</div>
+<div class="tests">
+
+  <div class="test-card">
+    <div class="test-header" onclick="toggle(this)">
+      <div class="status pass"></div>
+      <span class="name">test_tap_image_button</span>
+      <span class="duration">0.02s</span>
+    </div>
+    <div class="steps">
+      
+    </div>
+  </div>
+
+</div>
+<div class="lightbox" id="lb" onclick="this.classList.remove('active')">
+  <img id="lb-img" src="">
+</div>
+<script>
+function toggle(el){ el.nextElementSibling.classList.toggle('open'); }
+function showLightbox(img){ document.getElementById('lb-img').src=img.src; document.getElementById('lb').classList.add('active'); }
+</script>
+</body>
+</html>
